@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table style="border: 1px solid cornflowerblue">
+        {% for i in use_list %}
+            <tr >
+                <td style="border: 1px solid cornflowerblue">{{ i.name }}</td>
+                <td style="border: 1px solid cornflowerblue">{{ i.phone }}</td>
+                <td style="border: 1px solid cornflowerblue">{{ i.email }}</td>
+                <td style="border: 1px solid cornflowerblue"><a href="/login/{{ i.name }}">编辑{{ i.name }}</a></td>
+                <td style="border: 1px solid cornflowerblue"><a href="/login/%{{ i.name }}%">删除{{ i.name }}</a></td>
+            </tr>
+
+        {% endfor %}
+    </table>
+</body>
+</html>
